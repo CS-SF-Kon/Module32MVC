@@ -19,9 +19,7 @@ public class LogsController : Controller
     public async Task<IActionResult> Index()
     {
         var reqlogs = await _reqlog.GetRequests();
-        Console.WriteLine();
         Console.Write(reqlogs);
-        Console.WriteLine();
         return View(reqlogs);
     }
 }
